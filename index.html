@@ -1,1 +1,18 @@
-
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문고은 포트폴리오</title>
+<style>html,body{margin:0;min-height:100%;background:#0b0b0d;color:#f2f0eb;font-family:system-ui,sans-serif;display:grid;place-items:center}#status{font-size:14px;letter-spacing:.04em;opacity:.65}</style>
+</head>
+<body>
+<div id="status">포트폴리오를 불러오는 중입니다…</div>
+<script>
+fetch("https://raw.githubusercontent.com/moongoeun10-dotcom/moongoeun10-dotcom.github.io/8261c98050713a34e894edbeb75a0a3b67f5b6de/%EB%AC%B8%EA%B3%A0%EC%9D%80-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%282%29.html")
+.then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.text()})
+.then(function(html){document.open();document.write(html);document.close()})
+.catch(function(){document.getElementById("status").textContent="포트폴리오를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."});
+</script>
+</body>
+</html>
